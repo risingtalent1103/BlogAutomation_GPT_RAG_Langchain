@@ -1,0 +1,13 @@
+name: ecrivai
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+    - jupyterlab==4.0.9
+    - langchain-core==0.1.4
+    - langchain-google-genai==0.0.5
+    - langchain==0.0.352
+    - python-dotenv==1.0.0
+    - black==23.12.1
+    - pylint==3.0.3
+    - -e .

@@ -1,0 +1,8 @@
+<VirtualHost *:80>
+    ServerName goldexcg.com
+    WSGIScriptAlias / /flask_server/server.wsgi
+    <Directory /flask_server>
+        Order allow,deny
+        Allow from all
+    </Directory>
+</VirtualHost>
