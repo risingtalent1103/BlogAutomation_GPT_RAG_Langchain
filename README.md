@@ -1,62 +1,41 @@
-[![blog-link](https://img.shields.io/badge/ecrivai-blog-blue)](https://ruankie.github.io/ecrivai-blog-hugo/)
-[![auto-publish](https://github.com/ruankie/ecrivai-blog-hugo/actions/workflows/sheduled-publish.yml/badge.svg)](https://github.com/ruankie/ecrivai-blog-hugo/actions/workflows/sheduled-publish.yml)
-[![GitHub stars](https://img.shields.io/github/stars/ruankie/ecrivai)](https://github.com/ruankie/ecrivai/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/ruankie/ecrivai)](https://github.com/ruankie/ecrivai/network)
-[![GitHub contributors](https://img.shields.io/github/contributors/ruankie/ecrivai)](https://github.com/ruankie/ecrivai/graphs/contributors)
-[![GitHub last commit](https://img.shields.io/github/last-commit/ruankie/ecrivai)](https://github.com/ruankie/ecrivai/commits/main)
-
-
-# 🦜🔗✏️EcrivAI
-EcrivAI is a fully automated AI blog writer that uses LangChain and GPT type LLMs for topic selection and content generation. The content is published to [this blog](https://ruankie.github.io/ecrivai-blog-hugo/)
-
-<details closed><summary>Star History</summary>
-    
-<a href="https://star-history.com/#ruankie/ecrivai&Timeline">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=ruankie/ecrivai&type=Timeline&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=ruankie/ecrivai&type=Timeline" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=ruankie/ecrivai&type=Timeline" />
-  </picture>
-</a>
-
-</details>
-
+# Blog Website Project using Flask, React, Langchain, and GPT
+## Introduction
+Welcome to the Blog Website Project, a platform that combines the power of Flask for the backend, React for the frontend, and AI technologies such as Langchain and GPT. This project is developed by Ronan Lee and Jinguo Lee. The website is hosted at [goldexcg.com](https://goldexcg.com/).
+## Prerequisites
+Before using this project, ensure that you have the following installed on your computer:
+- Python 3.6 or higher
+- Node.js
+- Flask
+- React
+- Langchain
+- GPT
+## How it works
+The Blog Website Project leverages Flask for the backend and React for the frontend. It integrates Langchain for language translation and GPT for AI-powered content generation. The website offers a user-friendly interface, allowing users to create accounts, write blog posts, and engage with other users' content through comments, likes, and shares.
+## Features
+The project includes the following key features:
+- User authentication and authorization
+- Blog post creation and editing
+- Commenting, liking, and sharing blog posts
+- Language translation using Langchain
+- AI-powered content generation using GPT
+## Installation
+To install the Blog Website Project, follow these steps:
+1. Clone the repository from GitHub.
+2. Install the required Python libraries using pip.
+3. Install the required Node.js libraries using npm.
+4. Start the Flask server using the command `flask run`.
+5. Start the React server using the command `npm start`.
 ## Usage
-### Prerequisites
-1. 🐍 You will need a working install of [`conda`](https://www.anaconda.com/download#downloads).
-2. 🔑 You will need an API key from OpenAI or Google. You can create one for free here:
-    - [OpenIA](https://platform.openai.com/account/api-keys) - to use models like GPT4
-    - [Google](https://ai.google.dev/) - to use models like Gemini
-
-### Dev Environment Setup
-1. Set up your API keys in a file called `.env` (see `.env.example` for an example)
-2. Set up and activate conda environment
-    ```bash
-    conda env create -f conda.yml
-    conda activate ecrivai
-    ```
-
-> If you are having trouble setting your environment variables with the `.env` file or you want to manually add them instead of using a `.env` file, you can set your environment variable in your `ecrivai` conda environment like this:
->```shell
-> # set api key env var
-> conda env config vars set OPENAI_API_KEY="your-api-key-here"
-> conda env config vars set GOOGLE_API_KEY="your-api-key-here"
-> # re-activate env
-> conda activate base
-> conda activate ecrivai
->```
-
-### CLI
-
-> Note: Remember to activate your `ecrivai` conda environment before doing this (see above)
-
-You can quickly generate a new original blog by running:
-
-```
-python ecrivai/add_blog.py
-```
-
-This will add a blog to a Markdown file in a directory called `content/`. You can also specify your own output directory by running this instead:
-```
-python ecrivai/add_blog.py --out-dir path/to/dir
-```
+To use the Blog Website Project, follow these steps:
+1. Navigate to the website at [goldexcg.com](https://goldexcg.com/).
+2. Create an account or log in.
+3. Start writing blog posts.
+4. Engage with other users' content through comments, likes, and shares.
+## Testing
+To test the Blog Website Project, follow these steps:
+1. Install the required testing libraries using pip.
+2. Run the tests using the command `pytest`.
+## Status and Roadmap
+The Blog Website Project is currently in active development, with ongoing work to add new features and enhance the user experience.
+## Conclusion
+The Blog Website Project is a cutting-edge platform that empowers users to share their ideas and engage with AI-powered content generation. By combining Flask, React, Langchain, and GPT, the project offers a unique and innovative approach to blogging. For any inquiries, please contact the developers at ronanlee0105@gmail.com or jinguolee.aitech@gmail.com.
