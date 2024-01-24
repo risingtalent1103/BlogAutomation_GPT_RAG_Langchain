@@ -3,6 +3,10 @@
 Welcome to the Blog Website Project, a platform that combines the power of Flask for the backend, React for the frontend, and AI technologies such as Langchain and GPT. This project is developed by Ronan Lee and Jinguo Lee. The website is hosted at [goldexcg.com](https://goldexcg.com/).
 ## Prerequisites
 Before using this project, ensure that you have the following installed on your computer:
+1. 🔑 You will need an API key from OpenAI or Google. You can create one for free here:
+    - [OpenIA](https://platform.openai.com/account/api-keys) - to use models like GPT4
+    - [Google](https://console.cloud.google.com/apis/credentials?project=mindful-audio-408516) - to search related data in online with google search engine
+2. Development Environments and Packages: 
 - Python 3.12
 - Flask
 - React
