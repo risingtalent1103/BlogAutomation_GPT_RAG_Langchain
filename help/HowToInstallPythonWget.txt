@@ -1,0 +1,72 @@
+
+
+1. Connect to your server by SSH
+(reference this url)
+https://support.cpanel.net/hc/en-us/articles/360050489653-Shell-access-is-not-enabled-on-your-account
+
+
+2.install openssl(1.1.1)
+(reference this url)
+https://github.com/pypa/pip/issues/10939
+
+  1.Run wget with the URL to download the file.
+	wget https://www.openssl.org/source/openssl-1.1.1w.tar.gz
+  2.Confirm the file's integrity by downloading the SHA256 file on the same page next to it.
+	wget https://www.openssl.org/source/openssl-1.1.1w.tar.gz.sha256
+  3.View the checksum to confirm the version you downloaded is safe to use.
+	sha256sum openssl-1.1.1w.tar.gz
+	cat openssl-1.1.1w.tar.gz.sha256
+  4.Decompress this file.
+	tar zxvf openssl-1.1.1w.tar.gz
+
+  5.Change into the new openssl directory
+	cd openssl-1.1.1w
+  6.Configure openssl:
+	./config --prefix=/home/username/openssl --openssldir=/home/username/openssl no-ssl2
+	(provide your username in /home/username/openssl)
+  7.Run make. Once that is finished, run make test:
+	make
+	make test
+	(At the end, you should see All tests successful)
+  8.Run make install
+	make install
+  9.Change back to your [home directory]
+	cd ~
+  10.Add the following lines to your .bash_profile.
+	export PATH=/home/username/openssl/bin:$PATH
+	export LD_LIBRARY_PATH=/home/username/openssl/lib
+	export LC_ALL="en_US.UTF-8"
+	export LDFLAGS="-L /home/username/openssl/lib -Wl,-rpath,/home/username/openssl/lib"
+  11.Update the .bash_profile.
+	. ~/.bash_profile
+  12.test to confirm it's installed in the correct location and that the version is 1.1.1.
+	which openssl
+	(/home/username/openssl/bin/openssl)
+	openssl version
+	(OpenSSL 1.1.1g 21 Apr 2020)
+
+3.Install Python
+(reference this article)
+https://www.bluehost.com/help/article/python-installation
+:root/
+  1. mkdir ~/python
+  2.cd ~/python
+  3.wget http://www.python.org/ftp/python/3.12.0/Python-3.12.0.tgz
+  4.tar zxfv Python-3.12.0.tgz
+  5.find ~/python -type d | xargs chmod 0755
+  6.cd Python-3.12.0
+  7../configure --prefix=$HOME/python
+  8.make
+  9.make altinstall
+  10.vim ~/.bashrc
+     Press i
+     Enter:
+	export PATH=$HOME/python/Python-3.12.0/:$PATH
+  11.:wq
+     press enter
+  12. source ~/.bashrc
+  13. python --version   
+     (test version)
+
+4.Connet database
+https://docs.cpanel.net/knowledge-base/sql/install-or-update-postgresql-on-your-cpanel-server/#:~:text=Install%20or%20upgrade%20and%20configure%20PostgreSQL,-To%20install%20or&text=Run%20the%20%2Fusr%2Flocal%2F,not%20exist%20on%20your%20server.
