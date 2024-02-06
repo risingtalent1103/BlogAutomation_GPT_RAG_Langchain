@@ -1,7 +1,0 @@
-ServiceId: service_ud6o1lf
-
-TemplateId: template_hktbi39
-
-Public Key:5NpiwcY84jr3V0wmR
-
-Private Key: A98EQrK9EKo6F9e5hAW6y
