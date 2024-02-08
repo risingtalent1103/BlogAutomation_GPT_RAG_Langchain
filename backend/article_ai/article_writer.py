@@ -107,7 +107,7 @@ class ArticleWriter():
 
             # Concatenate the date/time and unique identifier
             unique_string = formatted_date_time + "_" + unique_id
-            with open(f"/home/vegaventures2/react-flask-app/blog_api/src/static/dist/images/{unique_string}.jpg", "wb") as f:
+            with open(f"/home/vegaventures2/react-flask-app/backend/src/static/dist/images/{unique_string}.jpg", "wb") as f:
                 f.write(response.content)
             return unique_string
             print('file save on local com')
